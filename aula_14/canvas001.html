@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        canvas{
+            border: 1px solid black
+        }
+    </style>
+
+</head>
+<body>
+    <div
+        canvas id="game"width="400px" height="300px">
+    
+    </canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("game");
+        const game = canvas.getContext("2d");
+
+        //BLOCO
+        const blocoLargura =30;
+        const blocoAltura = 30;
+        let blocoX = canvas.width/2 - blocoLargura/2;
+        let blocoY = canvas.height - 200;
+
+        //plataforma
+        const plataformaLargura = 400;
+        const plataformaAltura = 20;
+        const plataformaX = 0;
+        const plataformaY = canvas.height - plataformaAltura;
+
+        //funçao desenhar bloco
+        function desenhoBloco(){
+            game.fillStyle = "blue";
+            game.fillRect(blocoX, blocoY, blocoLargura, blocoAltura)
+        }
+        //funçao desenha plataforma
+        function desenharPlataforma(){
+            game.fillStyle = "red";
+            game.fillRect(plataformaX, plataformaY,plataformaLargura, plataformaAltura)
+        }
+        desenharBloco();
+        desenharPlataforma();
+
+
+
+        //funçao desenha jogo
+        function desenhaJogo(){
+            game.clearRect(0, 0, canvas.width, canvas.height);
+            desenharBloco();
+            desenharPlataforma();
+            requestAnimationFrame(desenhaJogo);
+            //movimentaçao horizontal
+            if(movendoParaDireita){
+                blocoX += 10;
+            }
+
+        }
+        desenhaJogo();
+
+        //funçao para movimento o bloco
+        addEventListener("keydowm", function(event){
+            if(event.code == "keyA"){
+                movendoParaEsquerda = true;     
+            } else if(event.code == "keyD"){
+                movendoParaDireita = true;
+            }
+        }
+
+        //funçao para quando soltar a tecla
+        addEventListener("keyup", function (event)){
+
+        
+        if (event.code=="keyA"){
+            movendoParaEsquerda = false;
+        } else if(event.code == "keyD"){
+            movendoParaDireita
+        }
+
+    }
+
+
+
+
+
+
+
+
+    </script>
+   
+    
+</body>
+</html>

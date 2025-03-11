@@ -1,0 +1,26 @@
+@charset "UTF-8"
+
+
+ h1 {
+    background-color: blue;
+    color: blueviolet;
+ }
+
+
+
+section h1 {
+    background-color: lightgreen;
+
+}
+section h2 {
+    background-color: lightgreen;
+}
+
+
+section.destaque {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+p

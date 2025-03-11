@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body {
+    background-color: brown;
+    
+}
+
+div#primeiro {
+    background-color: #5d5dda;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+
+div#segundo {
+    background-color: rgb(247, 5, 154);
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    
+}
+
+div#terceiro {
+    background-color: rgb(53, 231, 9);
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+
+div#quarto {
+    background-color: rgb(35, 5, 104);
+    height: 100px;text-align: center;
+    align-content: center;
+    margin: auto;
+}

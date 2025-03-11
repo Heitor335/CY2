@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio com formulario</title>
+</head>
+<body>
+    <h1>login</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="iusu">usuario</label>
+            <input type="text" name="usu" id="iusu">
+        </p>
+        <p>
+            <label for="isenha">senha</label>
+            <input type="password" name="senha" id="isenha">
+        </p>
+
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+    </form>
+
+    <h1>faça seu cadastro</h1>
+    <form action="cadastro.php" method="post">
+     <fieldset>
+        <legend>dados pessoais</legend>
+            <p>
+                <label for="inome"> nome:</label>
+                <input type="text" name="nome" id="inome" >
+            </p>
+            <p>
+                <label for="imail">E-mail:</label>
+                <input type="email" name="email" id="iemail">
+            </p>
+            <P>
+                <label for="itel">telefone:</label>
+                 <input type="text" type="tel" name="tel" id="itel" placeholder="(xx) yyyy-zzzz" >  
+            </P>
+            <P>
+                <label for="isenha">senha:</label>
+                 <input type="text" type="password" name="senha" id="isenha" minlength="8" >  
+            </P>
+
+
+
+
+
+     </fieldset>
+    </form>
+   
+</body>
+</html>
